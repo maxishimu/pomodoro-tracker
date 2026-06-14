@@ -1,119 +1,20 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Радиола Фокус</title>
-  <meta name="theme-color" content="#8f6b3b" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="radio-shell">
-    <section class="radio-top">
-      <div class="brand-block">
-        <div class="brand-mark">Р</div>
-        <div>
-          <div class="brand-title">Радиола Фокус</div>
-          <div class="brand-subtitle">Таймер производительности • ламповый стиль</div>
-        </div>
-      </div>
-
-      <div class="mode-pills">
-        <button class="pill active" id="modeWorkBtn" type="button">Работа</button>
-        <button class="pill" id="modeShortBtn" type="button">Короткий</button>
-        <button class="pill" id="modeLongBtn" type="button">Длинный</button>
-      </div>
-    </section>
-
-    <section class="dial-area">
-      <div class="glass-panel">
-        <div class="dial-header">
-          <div>
-            <div class="dial-label" id="modeLabel">Рабочий режим</div>
-            <div class="dial-meta" id="sessionMeta">Сеанс 1</div>
-          </div>
-          <div class="signal" aria-hidden="true" id="signalBars">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-
-        <div class="timer" id="timer">25:00</div>
-
-        <div class="progress-row">
-          <div class="progress-track">
-            <div class="progress-fill" id="progressFill"></div>
-          </div>
-          <div class="progress-text" id="progressText">0%</div>
-        </div>
-
-        <div class="tuning">
-          <div class="tuning-left">
-            <div class="small-caption">Частота фокуса</div>
-            <div class="freq" id="freqText">88.8 FM</div>
-          </div>
-          <div class="tuning-right">
-            <div class="small-caption">Состояние</div>
-            <div class="state-chip" id="stateChip">Ожидание</div>
-          </div>
-        </div>
-      </div>
-
-      <aside class="knob-column">
-        <button class="knob primary" id="startBtn" type="button">
-          <span>Пуск</span>
-        </button>
-        <button class="knob" id="stopBtn" type="button">
-          <span>Стоп</span>
-        </button>
-        <button class="knob" id="resetBtn" type="button">
-          <span>Сброс</span>
-        </button>
-        <button class="knob" id="skipBtn" type="button">
-          <span>Переключить</span>
-        </button>
-      </aside>
-    </section>
-
-    <section class="dashboard-grid">
-      <article class="card">
-        <div class="card-title">Статистика дня</div>
-        <div class="stat-line"><span>Помидоры</span><strong id="tomatoesToday">0</strong></div>
-        <div class="stat-line"><span>Фокус минут</span><strong id="focusMinutes">0</strong></div>
-        <div class="stat-line"><span>Серия</span><strong id="streakDays">0 дн.</strong></div>
-      </article>
-
-      <article class="card">
-        <div class="card-title">Энергия путешествий</div>
-        <div class="trip-city" id="tripCity">Budapest</div>
-        <div class="trip-bar">
-          <div class="trip-fill" id="tripFill"></div>
-        </div>
-        <div class="trip-meta">
-          <span id="tripSaved">184 zł</span>
-          <span id="tripTarget">399 zł</span>
-        </div>
-      </article>
-
-      <article class="card wide">
-        <div class="card-title">Лента активности</div>
-        <div class="heatmap" id="heatmap"></div>
-      </article>
-
-      <article class="card wide">
-        <div class="card-title">Достижения</div>
-        <div class="badges" id="badges"></div>
-      </article>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js");
-      });
+{
+  "name": "Радиола Фокус",
+  "short_name": "Радиола",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1b140d",
+  "theme_color": "#8f6b3b",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  </script>
-</body>
-</html>
+  ]
+}
